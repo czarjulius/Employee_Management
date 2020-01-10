@@ -62,7 +62,8 @@ namespace EmployeeAPI.Controllers
             }
         }
 
-        public HttpResponseMessage Post([FromBody] Employee employee)
+        [HttpPost]
+        public HttpResponseMessage addNewEmployee([FromBody] Employee employee)
         {
 
             try {
@@ -85,7 +86,8 @@ namespace EmployeeAPI.Controllers
             
         }
 
-        public HttpResponseMessage Delete(int id)
+        [HttpDelete]
+        public HttpResponseMessage removeEmployeeById(int id)
         {
             try {
                 using (EmployeeDBEntities entities = new EmployeeDBEntities())
@@ -113,7 +115,8 @@ namespace EmployeeAPI.Controllers
 
         }
 
-        public HttpResponseMessage Put(int id, [FromBody] Employee employee)
+        [HttpPut]
+        public HttpResponseMessage editEmployeeById(int id, [FromBody] Employee employee)
         {
             try {
 
