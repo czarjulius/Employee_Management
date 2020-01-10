@@ -98,7 +98,7 @@ namespace EmployeeAPI.Controllers
                     {
                         return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with id " + id.ToString() + " not found");
                     }
-                    else
+                    else 
                     {
                         entities.Employees.Remove(entity);
                         entities.SaveChanges();
